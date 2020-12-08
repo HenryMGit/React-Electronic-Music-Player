@@ -63,6 +63,12 @@ input[type="range"]::-webkit-slider-thumb {
   pointer-events: none;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 5rem;
+}
+
 @media screen and (max-width: 768px) {
   .time-control {
     width: 90%;

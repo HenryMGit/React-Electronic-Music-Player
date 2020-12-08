@@ -71,6 +71,7 @@ const Player = ({currentSong, isPlaying, setIsPlaying, audioRef,setSongInfo, son
     const trackAnim = {
         transform: `translateX(${songInfo.animationPercentage}%)`
     }
+    
     return(
        <div className="player">
            <div className="time-control">
@@ -91,7 +92,9 @@ const Player = ({currentSong, isPlaying, setIsPlaying, audioRef,setSongInfo, son
                <FontAwesomeIcon onClick={playSongHandler} className="play"  size="2x" icon={isPlaying ? faPause : faPlay}/>
                <FontAwesomeIcon className="skip-forward" onClick={()=> skipTrackHandler('skip-forward')} size="2x" icon={faAngleRight}/>
            </div>
-           
+           <div className="footer">
+                <p>Music Promoted by: {currentSong.promoted} </p>
+           </div>
        </div>
     );
 }
